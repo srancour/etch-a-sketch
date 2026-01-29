@@ -13,7 +13,6 @@ function makeGrid (rows, columns) {
         makeRow.className = "row";
 
         grid.appendChild(makeRow);
-        log("row");
         for (j = 0; j < columns; j++) {
             const makeColumn = document.createElement("div");
             makeColumn.className = "column";
@@ -24,3 +23,11 @@ function makeGrid (rows, columns) {
 }
 
 makeGrid(numberRows, numberColumns);
+
+const cells = document.querySelectorAll(".column");
+
+cells.forEach(element => {
+    element.addEventListener("mouseover", (event) => {
+        element.classList.add("filled");
+    });
+});

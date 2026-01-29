@@ -4,3 +4,25 @@
 body {
     margin: 0;
 }
+
+#grid {
+    width: 960px;
+    height: 960px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.column {
+    flex-grow: 1;
+}
+
+.filled {
+    background-color: black;
+}
