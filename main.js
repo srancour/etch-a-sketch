@@ -27,7 +27,12 @@ function makeGrid (rows, columns) {
     cells = document.querySelectorAll(".column");
     cells.forEach(cell => {
         cell.addEventListener("mouseover", (event) => {
-            cell.classList.add("filled");
+            // base project
+            // cell.classList.add("filled");
+
+            // extra credit 1
+            let hexValue = '#'+(Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0');
+            cell.style.backgroundColor = hexValue;
         });
     });
 }
