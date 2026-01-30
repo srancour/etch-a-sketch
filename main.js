@@ -31,8 +31,13 @@ function makeGrid (rows, columns) {
             // cell.classList.add("filled");
 
             // extra credit 1
-            let hexValue = '#'+(Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0');
+            let hexValue = '#' + Math.floor(Math.random() * 0xFFFFFF)
+                            .toString(16)
+                            .padStart(6, '0');
             cell.style.backgroundColor = hexValue;
+
+            // extra credit 2
+
         });
     });
 }
