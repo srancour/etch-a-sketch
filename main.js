@@ -37,7 +37,9 @@ function makeGrid (rows, columns) {
             cell.style.backgroundColor = hexValue;
 
             // extra credit 2
-
+            let opacity = Number(window.getComputedStyle(cell).getPropertyValue("opacity"));
+            opacity += 0.1;
+            cell.style.opacity = opacity;
         });
     });
 }
